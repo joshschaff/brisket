@@ -1,21 +1,11 @@
+from datetime import datetime, timedelta
+from pathlib import Path
+
 from gridstatusio.gs_client import GridStatusClient
 import pandas as pd
 
-from datetime import datetime, timezone, timedelta
-from enum import StrEnum
-from pathlib import Path
+from models import GridStatusScedDatasets
 
-
-class GridStatusScedDatasets(StrEnum):
-    # TODO: is this really necessary? or just hard code strings inside member functions?
-    ERCOT_SHADOW_PRICES_SCED = 'ercot_shadow_prices_sced'
-    ERCOT_SCED_GEN_RESOURCE_60_DAY = 'ercot_sced_gen_resource_60_day'
-    ERCOT_SCED_SYSTEM_LAMBDA = 'ercot_sced_system_lambda'
-    ERCOT_LMP_BY_BUS = 'ercot_lmp_by_bus'
-    ERCOT_LMP_BY_SETTLEMENT_POINT = 'ercot_lmp_by_settlement_point'
-
-
-CT = timezone(timedelta(hours=-6))  # todo: dst
 
 SCED_MINUTES = 5
 SCED_TIMESTAMP_COLUMN_NAME = 'sced_timestamp_utc'
