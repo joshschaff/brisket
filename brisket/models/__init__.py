@@ -13,3 +13,5 @@ class GridStatusScedDatasets(StrEnum):
     ERCOT_SCED_SYSTEM_LAMBDA = 'ercot_sced_system_lambda'
     ERCOT_LMP_BY_BUS = 'ercot_lmp_by_bus'
     ERCOT_LMP_BY_SETTLEMENT_POINT = 'ercot_lmp_by_settlement_point'
+
+
